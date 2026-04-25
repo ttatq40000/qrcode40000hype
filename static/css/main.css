@@ -1,0 +1,338 @@
+
+/* ===== ОБНУЛЕНИЕ СТАНДАРТНЫХ СТИЛЕЙ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.header__img {
+    height: 150px;
+    width: 150px;
+    flex-shrink: 0;  /* запрещает сжатие */
+    object-fit: contain;  /* сохраняет пропорции */
+}
+.history-image {
+    float: left;              /* картинка слева, текст обтекает */
+    width: 400px;             /* ширина блока с картинкой */
+    margin-right: 25px;       /* ОТСТУП ОТ КАРТИНКИ ДО ТЕКСТА */
+    margin-bottom: 15px;
+}
+
+.history-image img {
+    width: 100%;              /* картинка на всю ширину блока */
+    height: auto;             /* высота автоматически */
+    border-radius: 10px;      /* скругление углов */
+}
+
+.history-image .caption {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Очистка обтекания после картинки */
+.clearfix {
+    clear: both;
+}
+
+.sravnenie-image {
+    float: right;              /* картинка слева, текст обтекает */
+    width: 400px;             /* ширина блока с картинкой */
+    margin-right: 25px;       /* ОТСТУП ОТ КАРТИНКИ ДО ТЕКСТА */
+    margin-bottom: 15px;
+}
+
+.sravnenie-image img {
+    width: 100%;              /* картинка на всю ширину блока */
+    height: auto;             /* высота автоматически */
+    border-radius: 10px;      /* скругление углов */
+}
+
+.sravnenie-image .caption {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Очистка обтекания после картинки */
+.clearfix {
+    clear: both;
+}
+.cocovid-image {
+    float: right;              /* картинка слева, текст обтекает */
+    width: 400px;             /* ширина блока с картинкой */
+    margin-right: 25px;       /* ОТСТУП ОТ КАРТИНКИ ДО ТЕКСТА */
+    margin-bottom: 15px;
+}
+
+.cocovid-image img {
+    width: 100%;              /* картинка на всю ширину блока */
+    height: auto;             /* высота автоматически */
+    border-radius: 10px;      /* скругление углов */
+}
+
+.cocovid-image .caption {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Очистка обтекания после картинки */
+.clearfix {
+    clear: both;
+}
+.micro-image {
+    float: left;              /* картинка слева, текст обтекает */
+    width: 200px;             /* ширина блока с картинкой */
+    margin-right: 25px;       /* ОТСТУП ОТ КАРТИНКИ ДО ТЕКСТА */
+    margin-bottom: 15px;
+}
+
+.micro-image img {
+    width: 100%;              /* картинка на всю ширину блока */
+    height: auto;             /* высота автоматически */
+    border-radius: 10px;      /* скругление углов */
+}
+
+.micro-image .caption {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Очистка обтекания после картинки */
+.clearfix {
+    clear: both;
+}
+
+.iqr-image {
+    float: right;              /* картинка слева, текст обтекает */
+    width: 200px;             /* ширина блока с картинкой */
+    margin-right: 25px;       /* ОТСТУП ОТ КАРТИНКИ ДО ТЕКСТА */
+    margin-bottom: 15px;
+}
+
+.iqr-image img {
+    width: 100%;              /* картинка на всю ширину блока */
+    height: auto;             /* высота автоматически */
+    border-radius: 10px;      /* скругление углов */
+}
+
+.iqr-image .caption {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Очистка обтекания после картинки */
+.clearfix {
+    clear: both;
+}
+h1 { font-size: 67px;}
+h2 { font-size: 25px;
+   line-height: 2;}
+body {
+    font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #503e2c;
+    background: linear-gradient(135deg, #FFFFFF, #fff5fb);
+}
+
+/* ===== ШАПКА И МЕНЮ ===== */
+.nav-pills .nav-link {
+    color: #ce6d9b !important; /*цвет ссылки*/
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    margin-right: 30px !important;
+    font-size: 20px !important;
+    padding: 5px 10px !important;
+}
+
+.nav-pills .nav-link:hover {
+    background: #fffff !important;
+    border-radius: 5px !important;
+    transform: translateY(-2px) !important;
+    color: #e683a1 !important;  /*цвет ссылки при наведении*/
+}
+
+.nav-pills .nav-link.active {
+    background: #3498db !important;
+    border-radius: 5px !important;
+    color: #88B836 !important;
+}
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+}
+p a {
+    color: #e683a1;  /*  цвет */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p a:hover {
+    color: #b5627c;  /* при наведении */
+    text-decoration: underline;
+}
+/* ===== ЗАГОЛОВКИ ===== */
+h1 {
+    color: #59382C;
+    margin-bottom: 70px;
+    text-align: left !important;
+    background: transparent;
+}
+
+/* ===== ФОРМЫ И КНОПКИ ===== */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: border-color 0.3s ease;  /* ← добавлено */
+}
+
+input:focus {
+    outline: none;
+    border-color: #59382C;
+}
+
+/* Основные кнопки */
+button {
+    background: #59382C;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;  /* ← исправлено */
+}
+
+button:hover {
+    background: #59382C;
+    transform: scale(1.02);  /* ← добавлено */
+}
+
+/* ===== QR-КОД ===== */
+.qr-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.qr-container img {
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Кнопка скачивания */
+.download-btn {
+    display: inline-block;
+    background: #59382C;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;  /* ← добавлено */
+}
+
+.download-btn:hover {
+    background: #219a52;
+    transform: translateY(-2px);  /* ← добавлено */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ БЛОКИ ===== */
+.info-block {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.info-block p {
+    margin: 0;
+}
+
+.placeholder {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.placeholder p {
+    font-size: 18px;
+}
+
+.placeholder .small {
+    font-size: 14px;
+}
+
+.data-preview {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.tip {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #888;
+}
+
+.tip hr {
+    margin-bottom: 10px;
+}
+/* Ссылки в навигации */
+    .nav-pills .nav-link {
+        transition: all 0.3s ease !important;
+    }
+
+    .nav-pills .nav-link:hover {
+        background: #fffff !important;
+        transform: translateY(-2px) !important;
+        border-radius: 5px !important;
+    }
+
+    /* Все кнопки */
+    .btn, button {
+        transition: all 0.3s ease !important;
+    }
+
+    .btn:hover, button:hover {
+        transform: scale(1.02) !important;
+    }
+
+    /* Кнопка скачивания */
+    .download-btn {
+        transition: all 0.3s ease !important;
+    }
+
+    .download-btn:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    }
