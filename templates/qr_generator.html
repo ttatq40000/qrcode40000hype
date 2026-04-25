@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Генератор QR-кодов{% endblock %}
+
+{% block content %}
+    <h1> Генератор QR-кодов</h1>
+   <hr>
+
+    <!-- Описание, что это и как работает -->
+    <div style="background: #fffff; padding: 15px; border-radius: 10px; margin-bottom: 25px;">
+        <p style="margin: 0; color: #503e2c;">
+            <strong> Что такое QR-код?</strong><br>
+            QR-код — это двумерный тип штрих-кода, который легко считывается цифровым устройством и хранит информацию в виде серии пикселей в квадратной сетке, которая внешне выглядит как черно-белый узор.
+            Сканируйте его камерой телефона, чтобы быстро перейти на сайт, получить текст или сохранить контакт.
+        </p>
+    </div>
+
+    <!-- Форма для ввода данных -->
+    <form method="post">
+        <label for="data" style="font-weight: bold; display: block; margin-bottom: 5px;">
+             Введите текст или URL:
+        </label>
+        <input type="text" name="data" id="data" placeholder="Например: https://example.com или любой текст" required>
+        <button type="submit"> Сгенерировать QR-код</button>
+    </form>
+
+    <!-- Результат генерации -->
+    {% if qr_data %}
+        <div class="qr-container">
+            <h3> Ваш QR-код готов!</h3>
+            <p style="color: #ce6d9b; font-size: 14px;">
+                Отсканируйте этот код камерой вашего телефона
+            </p>
+
+            <!-- Сам QR-код -->
+            <img src="{{ qrcode(qr_data) }}" alt="QR Code">
+
+
+            <!-- Кнопка скачивания -->
+            <a href="{{ qrcode(qr_data) }}" download="qrcode.png" class="download-btn" style="display: inline-block; background: #ce6d9b; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                 Скачать QR-код (PNG)
+            </a>
+
+            <!-- Советы по использованию -->
+            <div style="margin-top: 20px; font-size: 13px; color: #888;">
+                <hr>
+                 <strong>Совет:</strong> QR-код можно распечатать, отправить другу или разместить на визитке.
+            </div>
+        </div>
+    {% else %}
+        <!-- Пока пользователь ничего не ввёл -->
+        <div style="text-align: center; margin-top: 30px; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+            <p style="color: #888; font-size: 18px;">
+                 Введите текст выше и нажмите "Сгенерировать"
+            </p>
+            <p style="color: #aaa; font-size: 14px;">
+                Вы можете закодировать: ссылку, текст, контактные данные, Wi-Fi пароль и многое другое
+            </p>
+        </div>
+    {% endif %}
+{% endblock %}
